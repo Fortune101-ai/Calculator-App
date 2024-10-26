@@ -1,59 +1,78 @@
-
 body {
-    margin:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Arial', sans-serif;
+	background-color: hsl(210, 60%, 95%);
 }
 
-
 #calculator {
-    background-color: hsl(0,0,14.5%);
-    border-radius: 15px;
-    max-width: 500px;
-    overflow: hidden;
+	background-color: hsl(210, 20%, 15%);
+	border-radius: 15px;
+	max-width: 90vw;
+	max-height: 90vh;
+	width: 400px;
+	overflow: hidden;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	border: 5px solid hsl(210, 60%, 50%);
 }
 
 #display {
-    width:100%;
-    padding: 20px;
-    font-size: 5rem;
-    text-align: right;
-    border: none;
-    background-color: hsl(0,0,20%);
+	width: 100%;
+	padding: 20px 30px;
+	font-size: 5rem;
+	text-align: right;
+	background-color: hsl(210, 20%, 20%);
+	color: white;
+	border-bottom: 4px solid hsl(210, 60%, 50%);
+	box-sizing: border-box;
+	height: 120px;
 }
 
 #btns {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap:10px;
-    padding: 25px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	padding: 25px;
 }
 
 button {
-    width:100px;
-    height: 100px;
-    border-radius:50px ;
-    background-color: hsl(0, 0, 25%);
-    color:white;
-    font-size: 3rem;
-    font-weight: bold;
-    cursor: pointer;
+	width: 100%;
+	height: 100px;
+	border-radius: 15px;
+	background-color: hsl(210, 30%, 25%);
+	color: white;
+	font-size: 3rem;
+	font-weight: bold;
+	border: none;
+	transition: background-color 0.3s;
+	cursor: pointer;
 }
 
 button:hover {
-    background-color: hsl(0,0%, 45%);
+	background-color: hsl(210, 30%, 40%);
 }
 
 button:active {
-    background-color: hsl(0,0%,60%) ;
+	background-color: hsl(210, 30%, 50%);
 }
 
 .operator {
-    background-color: tomato;
+	background-color: hsl(0, 70%, 50%);
 }
 
 .operator:hover {
-    background-color: rgb(247, 123, 101);
+	background-color: hsl(0, 70%, 60%);
+}
+
+@media (max-width: 600px) {
+	#display {
+		font-size: 4rem;
+	}
+	button {
+		height: 80px;
+		font-size: 2.5rem;
+	}
 }
